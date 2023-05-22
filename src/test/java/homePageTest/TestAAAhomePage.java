@@ -18,12 +18,12 @@ public class TestAAAhomePage extends TestBase{
 	    homePage.insertAgeInFirsrLicensed("20");
 	    homePage.selectMaritalStatus("Married");
 	    homePage.clickOnNext();
-	    
-	    
-	    
-	    
-	    
-	    
+	    logIn.clickOnRegisterBtn();
+	    logIn.clickOnRegister();
+	    logIn.clickOnNext();
+	    logIn.validateErrorAlert("Member Number is required");
+	    logIn.insertMemberId("12345678");
+	    logIn.insertZipCode("76227");
 	    
 	    
 	    

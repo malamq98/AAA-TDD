@@ -12,6 +12,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import objects.HomePage;
+import objects.LogIn;
 import util.Configuration;
 import util.Key;
 import static util.Key.*;
@@ -20,7 +21,8 @@ import static util.Browser.*;
 public class TestBase {
 
 	protected WebDriver driver;
-	protected HomePage homePage;;
+	protected HomePage homePage;
+	protected LogIn logIn;
 	Configuration conf = new Configuration();
 
 	@Parameters("browser")
@@ -65,7 +67,7 @@ public class TestBase {
 
 	protected void initObject() {
 		homePage = new HomePage(driver);
-
+         logIn = new LogIn(driver);
 	}
 
 	@AfterMethod
