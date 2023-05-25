@@ -8,6 +8,7 @@ public class TestHotels extends TestBase {
 	@Test
 	public void validateHotelsTab() {
 		hotels.clickOnHotelsTab();
+		hotels.validateTitle("Book your hotel stay with us and save");
 		hotels.insertLocationInDestiantionFld("Queens, NY, USA");
 		hotels.select_numbersOf_rooms("2");
 		hotels.select_date_checkIn("5/31/2023");

@@ -14,11 +14,13 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.Status;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import objects.Cars;
 import objects.Flights;
 import objects.HomePage;
 import objects.HomeQuote;
 import objects.Hotels;
 import objects.LogIn;
+import objects.Packages;
 import report.ExtentReport;
 import util.Configuration;
 import util.Key;
@@ -35,6 +37,8 @@ public class TestBase extends ExtentReportListner {
 	protected HomeQuote homeQuote;
 	protected Hotels hotels;
 	protected Flights flights;
+	protected Cars cars;
+	protected Packages packages;
 	Configuration conf = new Configuration();
 
 	@Parameters("browser")
@@ -83,6 +87,8 @@ public class TestBase extends ExtentReportListner {
          homeQuote = new HomeQuote(driver);
          hotels = new Hotels(driver);
          flights = new Flights(driver);
+         cars = new Cars(driver);
+         packages = new Packages(driver);
 	}
 	
 	private String getStackTrace(Throwable t) {
