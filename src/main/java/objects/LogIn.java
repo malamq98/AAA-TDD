@@ -1,6 +1,8 @@
 package objects;
 
 import static common.CommonWaits.*;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,8 +12,9 @@ import static common.CommonActions.*;
 
 public class LogIn {
 	
-	
+	WebDriver driver;
 	public LogIn(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements( driver,this);
 		init(driver);
 	}
@@ -42,6 +45,8 @@ public class LogIn {
 	}
 	
 	public void clickOnRegister() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click",register);
 		click(register);
 	}
 	
