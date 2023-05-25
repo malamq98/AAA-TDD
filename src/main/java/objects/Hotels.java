@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import static common.CommonActions.*;
 
 public class Hotels {
@@ -19,6 +21,9 @@ public class Hotels {
 
 	@FindBy(xpath = "//button[@id=\"travelWidgetHotelsTab\"]")
 	WebElement hotels;
+
+	@FindBy(xpath = "//div[@id=\"travelWidgetHotelsFormHeader\"]")
+	WebElement title;
 
 	@FindBy(xpath = "//input[@id=\"hotelsDestination\"]")
 	WebElement destinationFld;
@@ -37,6 +42,11 @@ public class Hotels {
 
 	public void clickOnHotelsTab() {
 		click(hotels);
+	}
+
+	public void validateTitle(String expected) {
+		waitUntilVisible(title);
+		Assert.assertEquals(getText(title), expected);
 	}
 
 	public void insertLocationInDestiantionFld(String location) {

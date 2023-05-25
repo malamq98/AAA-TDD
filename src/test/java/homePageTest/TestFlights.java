@@ -8,6 +8,7 @@ public class TestFlights extends TestBase {
 	@Test
 	public void validateFlightsTab() {
 		flights.clickOnFlightsTab();
+		flights.validateTitle("Book your flight with us");
 		flights.clickOneWay();
 		flights.insert_in_flying_from_fld("Dallas Area Airports (DFW)");
 		flights.insert_in_going_to_fld("John F Kennedy International Airport (JFK), New York, NY");

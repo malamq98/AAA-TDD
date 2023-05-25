@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import static common.CommonActions.*;
 
 public class Flights {
@@ -18,6 +20,9 @@ public class Flights {
 	
 	@FindBy(xpath = "//button[@id=\"travelWidgetFlightsTab\"]")
 	WebElement flightsTab;
+	
+	@FindBy(xpath = "//div[@id=\"travelWidgetFlightsFormHeader\"]")
+	WebElement title;
 	
 	@FindBy(xpath = "//input[@id=\"flightsOneWay\"]")
 	WebElement oneway;
@@ -42,6 +47,11 @@ public class Flights {
 	
 	public void clickOnFlightsTab() {
 		click(flightsTab);
+	}
+	
+	public void validateTitle(String expected) {
+		waitUntilVisible(title);
+		Assert.assertEquals(getText(title), expected);
 	}
 	
 	public void clickOneWay() {
