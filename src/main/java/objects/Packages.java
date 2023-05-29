@@ -39,6 +39,15 @@ public class Packages {
 	@FindBy(xpath = "//input[@id=\"packagesReturning\"]")
 	WebElement returingDate;
 	
+	@FindBy(xpath = "//div[@id=\"packagesAdults\"]")
+	WebElement adultsFld;
+	
+	@FindBy(xpath = "//button[@id=\"flightsChildren\"]")
+	WebElement childrenFld;
+	
+	@FindBy(xpath = "//button[@id=\"packagesSearch\"]")
+	WebElement searchBtn;
+	
 	public void clickOnPackagesTab() {
 		click(packagesTab);
 	}
@@ -68,5 +77,18 @@ public class Packages {
 	public void selectReturingDate(String date) {
 		dropdown(returingDate, date);
 	}
+	
+	public void selectNumbersOfAudlts(String number) {
+		dropdown(adultsFld, number);
+	}
+	
+	public void selectNumbersOfChildren(String number) {
+		dropdown(childrenFld, number);
+	}
+	
+	public void clickOnSearchButton() {
+		click(searchBtn);
+	}
+	
 
 }

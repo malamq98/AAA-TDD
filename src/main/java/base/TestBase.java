@@ -1,6 +1,5 @@
 package base;
 
-import java.lang.reflect.Method;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,11 +13,14 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.Status;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import objects.Activities;
 import objects.Cars;
+import objects.Cruises;
 import objects.Flights;
 import objects.HomePage;
 import objects.HomeQuote;
 import objects.Hotels;
+import objects.Life;
 import objects.LogIn;
 import objects.Packages;
 import report.ExtentReport;
@@ -28,6 +30,7 @@ import static util.Key.*;
 import static util.Browser.*;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.lang.reflect.Method;
 
 public class TestBase extends ExtentReportListner {
 
@@ -39,6 +42,9 @@ public class TestBase extends ExtentReportListner {
 	protected Flights flights;
 	protected Cars cars;
 	protected Packages packages;
+	protected Cruises  cruises;
+	protected Activities activities;
+	protected Life life;
 	Configuration conf = new Configuration();
 
 	@Parameters("browser")
@@ -89,6 +95,9 @@ public class TestBase extends ExtentReportListner {
          flights = new Flights(driver);
          cars = new Cars(driver);
          packages = new Packages(driver);
+         cruises = new Cruises(driver);
+         activities = new Activities(driver);
+         life = new Life(driver);
 	}
 	
 	private String getStackTrace(Throwable t) {

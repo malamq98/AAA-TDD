@@ -39,6 +39,12 @@ public class Hotels {
 
 	@FindBy(xpath = "//button[@id=\"hotelsSearch\"]")
 	WebElement searchBtn;
+	
+	@FindBy(xpath = "//div[@class=\"input-error\"]")
+	WebElement errorMessage;
+	
+	@FindBy(xpath = "//div[@class=\"input-error\"]")
+	WebElement checkInError;
 
 	public void clickOnHotelsTab() {
 		click(hotels);
@@ -63,6 +69,16 @@ public class Hotels {
 
 	public void select_check_out_date(String date) {
 		dropdown(check_out, date);
+	}
+	
+	public void validateErrorMessage(String expected) {
+		waitUntilVisible(errorMessage);
+		Assert.assertEquals(getText(errorMessage), expected);
+	}
+	
+	public void validateCheckInErrorMessage(String expected) {
+		waitUntilVisible(checkInError);
+		Assert.assertEquals(getText(checkInError), expected);
 	}
 
 	public void clickOnSearchBtn() {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="browser" value="chrome"></parameter>
+	<test thread-count="5" name="Test">
+		<parameter name="firstName1" value="Md"/>
+		<parameter name="lastName1" value="Alam"/>
+		<parameter name="dateOfBirth1" value="05/05/2000"/>
+		<parameter name="gender1" value="M"/>
+		<parameter name=" age1" value="29"/>
+		<parameter name="maritalStatus1" value="married"/>
+		<classes>
+			<class name="homePageTest.ParameterizeTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

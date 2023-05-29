@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name=" age1" value="29"/>
+    <parameter name="firstName1" value="Md"/>
+    <parameter name="lastName1" value="Alam"/>
+    <parameter name="gender1" value="M"/>
+    <parameter name="maritalStatus1" value="married"/>
+    <parameter name="dateOfBirth1" value="05/05/2000"/>
     <classes>
-      <class name="homePageTest.TestCars">
+      <class name="homePageTest.ParameterizeTest">
         <methods>
           <include name="aftereEachTest"/>
-          <include name="validateCarsTab"/>
           <include name="createTest"/>
           <include name="closingBrowser"/>
           <include name="initiateReport"/>
+          <include name="validateAutoQuote"/>
           <include name="beforeEachTest"/>
           <include name="closeReport"/>
         </methods>
-      </class> <!-- homePageTest.TestCars -->
+      </class> <!-- homePageTest.ParameterizeTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
