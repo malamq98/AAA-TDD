@@ -1,96 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Error while capturing screenshot<br>]]>
-    </line>
   </reporter-output>
-  <suite started-at="2023-05-25T10:49:10 CDT" name="Default suite" finished-at="2023-05-25T10:49:21 CDT" duration-ms="11541">
+  <suite started-at="2023-05-29T09:17:57 CDT" name="Suite" finished-at="2023-05-29T09:17:57 CDT" duration-ms="87">
     <groups>
     </groups>
-    <test started-at="2023-05-25T10:49:10 CDT" name="Default test" finished-at="2023-05-25T10:49:21 CDT" duration-ms="11541">
-      <class name="homePageTest.TestCars">
-        <test-method is-config="true" signature="initiateReport()[pri:0, instance:homePageTest.TestCars@449a4f23]" started-at="2023-05-25T10:49:09 CDT" name="initiateReport" finished-at="2023-05-25T10:49:10 CDT" duration-ms="534" status="PASS">
+    <test started-at="2023-05-29T09:17:57 CDT" name="Test" finished-at="2023-05-29T09:17:57 CDT" duration-ms="87">
+      <class name="homePageTest.ParameterizeTest">
+        <test-method is-config="true" signature="initiateReport()[pri:0, instance:homePageTest.ParameterizeTest@6e6f2380]" started-at="2023-05-29T09:17:56 CDT" name="initiateReport" finished-at="2023-05-29T09:17:57 CDT" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiateReport -->
-        <test-method is-config="true" signature="createTest(java.lang.reflect.Method)[pri:0, instance:homePageTest.TestCars@449a4f23]" started-at="2023-05-25T10:49:10 CDT" name="createTest" finished-at="2023-05-25T10:49:10 CDT" duration-ms="20" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void homePageTest.TestCars.validateCarsTab()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createTest -->
-        <test-method is-config="true" signature="beforeEachTest(java.lang.String)[pri:0, instance:homePageTest.TestCars@449a4f23]" started-at="2023-05-25T10:49:10 CDT" name="beforeEachTest" finished-at="2023-05-25T10:49:18 CDT" duration-ms="8608" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeEachTest -->
-        <test-method signature="validateCarsTab()[pri:0, instance:homePageTest.TestCars@449a4f23]" started-at="2023-05-25T10:49:18 CDT" name="validateCarsTab" finished-at="2023-05-25T10:49:20 CDT" duration-ms="1611" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="validateAutoQuote(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:homePageTest.ParameterizeTest@6e6f2380]" started-at="2023-05-29T09:17:57 CDT" name="validateAutoQuote" finished-at="2023-05-29T09:17:57 CDT" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (368, 706)
-  (Session info: chrome=113.0.5672.127)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f5f16b37601914852d28e367242a067, clickElement {id=65F3D22788B596BDCD379E9325315203_element_44}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\pia\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59514}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59514/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (6f5f16b37601914852d28e367242a067)] -> xpath: //button[@id="travelWidgetCarsTab"]]
-Session ID: 6f5f16b37601914852d28e367242a067]]>
+              <![CDATA[
+Parameter ' firstName1' is required by @Test on method validateAutoQuote but has not been marked @Optional or defined
+in C:\Users\pia\eclipse-workspace\com.aaa.TDD\parameterizeTest.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (368, 706)
-  (Session info: chrome=113.0.5672.127)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f5f16b37601914852d28e367242a067, clickElement {id=65F3D22788B596BDCD379E9325315203_element_44}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\pia\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:59514}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59514/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (6f5f16b37601914852d28e367242a067)] -> xpath: //button[@id="travelWidgetCarsTab"]]
-Session ID: 6f5f16b37601914852d28e367242a067
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at common.CommonActions.click(CommonActions.java:22)
-at objects.Cars.clickOnCarsTab(Cars.java:41)
-at homePageTest.TestCars.validateCarsTab(TestCars.java:12)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+              <![CDATA[org.testng.TestNGException: 
+Parameter ' firstName1' is required by @Test on method validateAutoQuote but has not been marked @Optional or defined
+in C:\Users\pia\eclipse-workspace\com.aaa.TDD\parameterizeTest.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -112,38 +51,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCarsTab -->
-        <test-method is-config="true" signature="aftereEachTest(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:homePageTest.TestCars@449a4f23]" started-at="2023-05-25T10:49:20 CDT" name="aftereEachTest" finished-at="2023-05-25T10:49:21 CDT" duration-ms="704" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateCarsTab status=FAILURE method=TestCars.validateCarsTab()[pri:0, instance:homePageTest.TestCars@449a4f23] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void homePageTest.TestCars.validateCarsTab()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Error while capturing screenshot<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- aftereEachTest -->
-        <test-method is-config="true" signature="closingBrowser()[pri:0, instance:homePageTest.TestCars@449a4f23]" started-at="2023-05-25T10:49:21 CDT" name="closingBrowser" finished-at="2023-05-25T10:49:21 CDT" duration-ms="542" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closingBrowser -->
-        <test-method is-config="true" signature="closeReport()[pri:0, instance:homePageTest.TestCars@449a4f23]" started-at="2023-05-25T10:49:21 CDT" name="closeReport" finished-at="2023-05-25T10:49:22 CDT" duration-ms="611" status="PASS">
+        </test-method> <!-- validateAutoQuote -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:homePageTest.ParameterizeTest@6e6f2380]" started-at="2023-05-29T09:17:57 CDT" name="closeReport" finished-at="2023-05-29T09:17:57 CDT" duration-ms="568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReport -->
-      </class> <!-- homePageTest.TestCars -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- homePageTest.ParameterizeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

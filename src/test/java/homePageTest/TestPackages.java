@@ -16,6 +16,9 @@ public class TestPackages extends TestBase {
 		packages.insertLocationinGoingToFld("Baha Mar, Bahamas");
 		packages.selecetDeaprtingDate("05/31/2023");
 		packages.selectReturingDate("06/01/2023");
+		packages.selectNumbersOfAudlts("3");
+		packages.selectNumbersOfChildren("0");
+		packages.clickOnSearchButton();
 
 	}
 

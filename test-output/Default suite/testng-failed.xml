@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="homePageTest.TestCars">
+      <class name="homePageTest.TestLife">
         <methods>
           <include name="aftereEachTest"/>
-          <include name="validateCarsTab"/>
           <include name="createTest"/>
           <include name="closingBrowser"/>
           <include name="initiateReport"/>
+          <include name="validateLifeTab"/>
           <include name="beforeEachTest"/>
           <include name="closeReport"/>
         </methods>
-      </class> <!-- homePageTest.TestCars -->
+      </class> <!-- homePageTest.TestLife -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
