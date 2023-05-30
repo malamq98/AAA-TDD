@@ -3,7 +3,6 @@ package homePageTest;
 import org.testng.annotations.Test;
 
 import base.TestBase;
-import objects.Cars;
 
 public class TestCars extends TestBase {
 
