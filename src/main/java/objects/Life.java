@@ -50,9 +50,9 @@ public class Life {
 	
 	
 	
-	public void selectInsuranceProduct(WebElement element ) {
-		   //whic method should i use here
-	}
+//	public void selectInsuranceProduct(WebElement element ) {
+//		   //whic method should i use here
+//	}
 	
 	
 	
